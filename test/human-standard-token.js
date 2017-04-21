@@ -93,16 +93,14 @@ test('HumanStandardToken balances are tracked', function (t) {
     return a
   })
   .then(() => {
+    tracked = tokenTracker.serialize()[0]
     t.equal(tracked.symbol, 'DBX', 'symbol retrieved')
     t.equal(tracked.address, tokenAddress, 'token address set')
     t.equal(tracked.balance.toString(10), '890', 'tokens sent')
     t.equal(tracked.decimals, 2, 'decimals received')
 
-    const data = tracked.serialize()
-    t.equal(data.string, '8.90', 'represents decimals')
-
-    const serialized = tokenTracker.serialize()
-    t.equal(serialized[0].string, data.string, 'serializes data')
+    const data = tracked
+    t.equal(data.string, '8.900', 'represents decimals')
 
     tokenTracker.stop()
     t.end()
@@ -135,11 +133,11 @@ test('HumanStandardToken balance changes are emitted', function (t) {
 
     updateCounter++
     if (updateCounter < 2) {
-      return t.equal(tracked.string, '8.90', 'initial balance loaded from last test')
+      return t.equal(tracked.string, '8.900', 'initial balance loaded from last test')
     }
 
     t.equal(tracked.symbol, 'DBX', 'symbol retrieved')
-    t.equal(tracked.string, '7.90', 'balance updated')
+    t.equal(tracked.string, '7.900', 'balance updated')
     tokenTracker.stop()
     t.end()
   })
@@ -175,7 +173,7 @@ test('HumanStandardToken non balance changes are not emitted', function (t) {
 
     updateCounter++
     if (updateCounter < 2) {
-      return t.equal(tracked.string, '7.90', 'initial balance loaded from last test')
+      return t.equal(tracked.string, '7.900', 'initial balance loaded from last test')
     }
 
     t.notOk(true, 'a second event should not have fired')

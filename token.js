@@ -1,5 +1,6 @@
 const BN = require('ethjs').BN
 const zero = new BN(0)
+const format = require('./format').formatBalance
 
 class Token {
 
@@ -40,14 +41,8 @@ class Token {
   }
 
   stringify() {
-    if (this.balance.eq(zero)) {
-      return '0'
-    }
-    let bal = this.balance.toString()
-    let decimals = parseInt(this.decimals.toString())
-    const len = bal.length
-    const result = `${bal.substr(0, len - decimals)}.${bal.substr(decimals - 1)}`
-    return result
+    const decimals = parseInt(this.decimals.toString())
+    return format(this.balance.toString(16), 3, decimals)
   }
 
   async updateSymbol() {
