@@ -1,6 +1,6 @@
 {
-  "name": "eth-token-tracker",
-  "version": "1.1.4",
+  "name": "eth-token-watcher",
+  "version": "1.1.5",
   "description": "A module for tracking Ethereum token balances over block changes.",
   "main": "dist/index.js",
   "scripts": {
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/flyswatter/eth-token-tracker.git"
+    "url": "git+ssh://git@github.com/vbaranov/eth-token-tracker.git"
   },
   "keywords": [
     "ethereum",
@@ -19,9 +19,9 @@
   "author": "Dan Finlay <dan@danfinlay.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/flyswatter/eth-token-tracker/issues"
+    "url": "https://github.com/vbaranov/eth-token-tracker/issues"
   },
-  "homepage": "https://github.com/flyswatter/eth-token-tracker#readme",
+  "homepage": "https://github.com/vbaranov/eth-token-tracker#readme",
   "dependencies": {
     "deep-equal": "^1.0.1",
     "eth-block-tracker": "^1.0.7",

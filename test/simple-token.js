@@ -78,6 +78,7 @@ test('StandardToken balances are tracked', function (t) {
         symbol: 'MKR',
         decimals: 18,
         address: tokenAddress,
+        network: 77,
       }
     ],
   })
@@ -106,6 +107,7 @@ test('StandardToken balances are tracked', function (t) {
     t.equal(tracked.symbol, 'MKR', 'initial symbol assumed')
     t.equal(tracked.decimals, 18, 'initial decimals retained')
     t.equal(tracked.address, tokenAddress, 'token address set')
+    t.equal(tracked.network, 77, 'network set')
     t.equal(tracked.balance.toString(10), should, 'tokens sent')
 
     t.ok(tracked.string.indexOf('90.0') === 0, 'represents decimals')
