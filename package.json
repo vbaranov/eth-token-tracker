@@ -1,6 +1,6 @@
 {
   "name": "eth-token-watcher",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "A module for tracking Ethereum token balances over block changes.",
   "main": "dist/index.js",
   "scripts": {
@@ -25,10 +25,11 @@
   "dependencies": {
     "deep-equal": "^1.0.1",
     "eth-block-tracker": "^1.0.7",
-    "ethjs": "^0.2.7",
-    "ethjs-contract": "^0.1.9",
-    "ethjs-query": "^0.2.6",
-    "human-standard-token-abi": "^1.0.2"
+    "ethjs": "^0.3.6",
+    "ethjs-contract": "^0.2.1",
+    "ethjs-query": "^0.3.7",
+    "human-standard-token-abi": "^1.0.2",
+    "safe-event-emitter": "^1.0.1"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
