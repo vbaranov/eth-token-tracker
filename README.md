@@ -4,12 +4,12 @@ A JS module for tracking Ethereum tokens and their values over time.
 
 ## Installation
 
-`npm install eth-token-tracker -S`
+`npm install eth-token-watcher -S`
 
 ## Usage
 
 ```javascript
-const TokenTracker = require('eth-token-tracker')
+const TokenTracker = require('eth-token-watcher')
 
 var tokenTracker = new TokenTracker({
 
