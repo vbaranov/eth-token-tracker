@@ -24,10 +24,10 @@
   },
   "homepage": "https://github.com/vbaranov/eth-token-tracker#readme",
   "dependencies": {
-    "deep-equal": "^1.0.1",
-    "eth-block-tracker": "^4.4.3",
+    "deep-equal": "^1.1.0",
+    "eth-block-tracker": "^4.4.2",
     "ethjs": "^0.3.6",
-    "ethjs-contract": "^0.2.3",
+    "ethjs-contract": "^0.2.1",
     "ethjs-query": "^0.3.7",
     "human-standard-token-abi": "^1.0.2",
     "safe-event-emitter": "^1.0.1"
@@ -37,9 +37,9 @@
     "@babel/core": "^7.5.5",
     "@babel/plugin-transform-runtime": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
-    "ganache-cli": "^6.9.1",
+    "ethereumjs-testrpc": "^3.0.4",
     "solc": "^0.4.10",
     "tape": "^4.6.3",
-    "web3-provider-engine": "^15.0.6"
+    "web3-provider-engine": "^15.0.1"
   }
 }
